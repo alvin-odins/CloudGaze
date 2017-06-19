@@ -1,0 +1,47 @@
+<div class="container">
+
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" [routerLink] = "['/']">
+              <!-- <header>
+                <div class="row">
+                  <div class="col-md-4"> -->
+                    <h1 class="logo"><i class="fa fa-cloud"></i>Cloud <span class="primary">Gaze</span></h1>
+                  <!-- </div>
+                </div>
+              </header> -->
+            </a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a [routerLinkActive] = "['active']" [routerLink] = "['/']">Home</a></li>
+              <li><a [routerLinkActive] = "['active']" [routerLink] = "['/about']">About Us</a></li>
+              <li><a [routerLinkActive] = "['active']" [routerLink] = "['/services']">Services</a></li>
+              <li><a [routerLinkActive] = "['active']" [routerLink] = "['/contact']">Contact Us</a></li>
+              <li><a [routerLinkActive] = "['active']" [routerLink] = "['/blog']">Blog</a></li>
+              <li><a [routerLinkActive] = "['active']" href="#">{{searchBox}}</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+             <form class="navbar-form">
+              <div class="form-group">
+                <input type="text"
+                           class="form-control"
+                           placeholder="Search..."
+
+                           name="searchBox">
+              </div>
+              <button type="submit" class="btn btn-default">Search</button>
+             </form>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+</div>
