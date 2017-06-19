@@ -1,5 +1,5 @@
 # CloudGaze
-[![cloudgaze]()
+[![cloudgaze]()]
 
 ## Set up
 ## Install dependencies
@@ -10,7 +10,7 @@ $ npm install
 on Windows
 
 ```cmd
-$ npm install
+ npm install
 ```
 
 ## Features
@@ -30,7 +30,7 @@ $ npm start
 on Windows
 
 ```cmd
-$ npm start
+ npm start
 ```
 
 ## License
