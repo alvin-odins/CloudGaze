@@ -8,28 +8,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
+var http_1 = require("@angular/http");
 var app_component_1 = require("./app.component");
 var router_1 = require("@angular/router");
-// third party imports
+// services
+var blog_service_1 = require("./services/blogs/blog.service");
 var navbar_component_1 = require("./navbar/navbar.component");
 var home_component_1 = require("./home/home.component");
 var about_component_1 = require("./about/about.component");
 var contact_component_1 = require("./contact/contact.component");
 var blog_component_1 = require("./blog/blog.component");
 var footer_component_1 = require("./footer/footer.component");
-var advertising_component_1 = require("./services/advertising/advertising.component");
-var consulting_component_1 = require("./services/consulting/consulting.component");
-var socialmedia_component_1 = require("./services/socialmedia/socialmedia.component");
-var webdevelopment_component_1 = require("./services/webdevelopment/webdevelopment.component");
+var advertising_component_1 = require("./products/advertising/advertising.component");
+var consulting_component_1 = require("./products/consulting/consulting.component");
+var socialmedia_component_1 = require("./products/socialmedia/socialmedia.component");
+var webdevelopment_component_1 = require("./products/webdevelopment/webdevelopment.component");
 var appRoutes = [
     { path: '', component: home_component_1.HomeComponent },
     { path: 'about', component: about_component_1.AboutComponent },
     { path: 'contact', component: contact_component_1.ContactComponent },
     { path: 'blog', component: blog_component_1.BlogComponent },
-    { path: 'services/advertising', component: advertising_component_1.AdvertisingComponent },
-    { path: 'services/consulting', component: consulting_component_1.ConsultingComponent },
-    { path: 'services/socialmedia', component: socialmedia_component_1.SocialmediaComponent },
-    { path: 'services/webdevelopment', component: webdevelopment_component_1.WebdevelopmentComponent }
+    { path: 'products/advertising', component: advertising_component_1.AdvertisingComponent },
+    { path: 'products/consulting', component: consulting_component_1.ConsultingComponent },
+    { path: 'products/socialmedia', component: socialmedia_component_1.SocialmediaComponent },
+    { path: 'products/webdevelopment', component: webdevelopment_component_1.WebdevelopmentComponent }
     // {
     //   path : 'services',
     //   children: [
@@ -56,7 +58,9 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule,
-            router_1.RouterModule.forRoot(appRoutes)],
+            router_1.RouterModule.forRoot(appRoutes),
+            http_1.HttpModule],
+        providers: [blog_service_1.BlogService],
         declarations: [app_component_1.AppComponent,
             navbar_component_1.NavbarComponent,
             home_component_1.HomeComponent,

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BlogService } from '../services/blogs/blog.service';
+import { IBlog } from '../services/blog';
 
 @Component({
   moduleId: module.id,
@@ -8,5 +10,21 @@ import { Component, OnInit } from '@angular/core';
 
 export class BlogComponent implements OnInit{
 
-  ngOnInit(){}
+  blogs: IBlog[];
+  errorMessage: string;
+
+  constructor(private _blogService: BlogService){}
+
+  ngOnInit(){
+    this.getBlogs()
+  }
+
+  getBlogs() {
+    this._blogService.getBlogs()
+      .subscribe(
+        blogs => this.blogs = blogs,
+        error => this.errorMessage = <any>error
+      );
+  }
+
 }
