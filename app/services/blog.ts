@@ -1,7 +1,7 @@
 export interface IBlog {
   id: string;
   title: string;
-  postedOn: Date;
+  postDate: Date;
   content: string;
   author: string;
   category: string;

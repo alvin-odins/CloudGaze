@@ -107,7 +107,7 @@ header form {
   width: 100%
 }
 footer {
-  text-align: center;
+  /*text-align: center;*/
   height: 60px;
   background: #f4f4f4;
   padding-top: 20px;

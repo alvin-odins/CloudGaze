@@ -12,7 +12,13 @@ export class BlogService{
 
   constructor(private _http: Http){}
 
-  getBlogs(): Observable<IBlog[]>{
+  // getBlogs(): Observable<IBlog[]>{
+  //   return this._http.get('app/api/blogData.json')
+  //     .map((response: Response) => response.json())
+  //     .catch(this.handleError);
+  // }
+
+  getBlogs(){
     return this._http.get('app/api/blogData.json')
       .map((response: Response) => response.json())
       .catch(this.handleError);

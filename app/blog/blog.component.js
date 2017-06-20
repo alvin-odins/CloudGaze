@@ -14,6 +14,8 @@ var blog_service_1 = require("../services/blogs/blog.service");
 var BlogComponent = (function () {
     function BlogComponent(_blogService) {
         this._blogService = _blogService;
+        // blogs: IBlog[];
+        this.blogs = [];
     }
     BlogComponent.prototype.ngOnInit = function () {
         this.getBlogs();

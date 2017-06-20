@@ -121,8 +121,9 @@ a{
 }
 
 .author-thumb{
-	width: 24px;
-	height: 24px;
+	width: 50px;
+	height: 50px;
+	margin-top: -18px;
 	float: left;
 	margin-right: 9px;
 	border-radius: 100%;

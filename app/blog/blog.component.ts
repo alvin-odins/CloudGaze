@@ -10,7 +10,8 @@ import { IBlog } from '../services/blog';
 
 export class BlogComponent implements OnInit{
 
-  blogs: IBlog[];
+  // blogs: IBlog[];
+  blogs = [];
   errorMessage: string;
 
   constructor(private _blogService: BlogService){}

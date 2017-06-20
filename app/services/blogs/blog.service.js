@@ -20,6 +20,11 @@ var BlogService = (function () {
     function BlogService(_http) {
         this._http = _http;
     }
+    // getBlogs(): Observable<IBlog[]>{
+    //   return this._http.get('app/api/blogData.json')
+    //     .map((response: Response) => response.json())
+    //     .catch(this.handleError);
+    // }
     BlogService.prototype.getBlogs = function () {
         return this._http.get('app/api/blogData.json')
             .map(function (response) { return response.json(); })
