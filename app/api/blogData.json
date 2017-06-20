@@ -2,7 +2,7 @@
   {
     "id" : 1,
     "title" : "The earliest form of technology",
-    "postedDate": "March 19, 1865",
+    "postDate": "March 19, 1865",
     "content": "Tolstoy's epic masterpiece intertwines the lives of private and public individuals during the time of the Napoleonic wars and the French invasion of Russia. The fortunes of the Rostovs and the Bolkonskys, of Pierre, Natasha, and Andrei, are intimately connected with the national history that is played out in parallel with their lives. Balls and soirees alternate with councils of war and the machinations of statesmen and generals, scenes of violent battles with everyday human passions in a work whose extraordinary imaginative power has never been surpassed.",
     "author" : "Leo Tolstoy",
     "comments" : "war",
@@ -11,7 +11,7 @@
   {
     "id" : 2,
     "title" : "Knowing about how technology has evolved desgin",
-    "postedDate": "June 19, 1990",
+    "postDate": "June 19, 1990",
     "content": "creating the brilliant architeure that is available took years of study and designing and testing those ideas with different sources. over time things got better as well as how things were handled and the times passed and then technology came to the rescue of designers and builders as well as the various users.",
     "author" : "Leo Tolstoy",
     "comments" : "war",
@@ -20,7 +20,7 @@
   {
     "id" : 3,
     "title" : "What is Lorem Impsum about",
-    "postedDate": "March 19, 1865",
+    "postDate": "March 19, 1865",
     "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "author" : "Leo Tolstoy",
     "comments" : "war",
@@ -29,7 +29,7 @@
   {
     "id" : 4,
     "title" : "Growing organically with Lorem Ipsum",
-    "postedDate": "March 19, 1865",
+    "postDate": "March 19, 1865",
     "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "author" : "Leo Tolstoy",
     "comments" : "war",
