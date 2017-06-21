@@ -16,10 +16,11 @@ var Observable_1 = require("rxjs/Observable");
 require("rxjs/add/operator/map");
 require("rxjs/add/operator/catch");
 require("rxjs/add/observable/throw");
+require("rxjs/add/operator/do");
 var BlogService = (function () {
-    // private _url: string = 'api/blogData.json';
     function BlogService(_http) {
         this._http = _http;
+        this._urlBlog = 'app/api/blogData.json';
     }
     // getBlogs(): Observable<IBlog[]>{
     //   return this._http.get('app/api/blogData.json')
@@ -27,9 +28,14 @@ var BlogService = (function () {
     //     .catch(this.handleError);
     // }
     BlogService.prototype.getBlogs = function () {
-        return this._http.get('app/api/blogData.json')
+        return this._http.get(this._urlBlog)
             .map(function (response) { return response.json(); })
             .catch(this.handleError);
+    };
+    BlogService.prototype.getBloggerId = function (id) {
+        return this.getBlogs()
+            .map(function (blogger) { return blogger.find(function (blogger) { return blogger.id === id; }); })
+            .do(function (data) { return console.log(data); });
     };
     BlogService.prototype.handleError = function (error) {
         console.error(error);

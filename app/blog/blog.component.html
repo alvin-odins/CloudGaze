@@ -4,7 +4,7 @@
 			<article class="post">
 				<header class="post-header">
 					<h2 class="post-title">
-						<a href="">{{blog.title}}</a>
+						<a href="#">{{blog.title}}</a>
 					</h2>
 				</header>
 				<section class="post-excerpt">
@@ -24,7 +24,8 @@
 
 		<nav class="pagination" role="navigation">
 			<span class="page-number">Page 1 of 6</span>
-			<a class="older-posts" href="">Older Posts</a>
+			<a (click)="goOlder()" class="older-posts" href="">Older Posts</a>
+			<a (click)="goNewer()" class="older-posts" href="">Newer Posts</a>
 			<span aria-hidden="true">→</span>
 		</nav>
 	</div>

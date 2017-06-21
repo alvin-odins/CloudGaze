@@ -5,10 +5,11 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
+import 'rxjs/add/operator/do';
 
 @Injectable()
 export class BlogService{
-  // private _url: string = 'api/blogData.json';
+  private _urlBlog: string = 'app/api/blogData.json';
 
   constructor(private _http: Http){}
 
@@ -19,9 +20,16 @@ export class BlogService{
   // }
 
   getBlogs(){
-    return this._http.get('app/api/blogData.json')
+    return this._http.get(this._urlBlog)
       .map((response: Response) => response.json())
       .catch(this.handleError);
+  }
+
+
+  getBloggerId(id: string){
+    return this.getBlogs()
+      .map((blogger: any) => blogger.find(blogger => blogger.id === id))
+      .do(data => console.log(data));
   }
 
   private handleError(error: Response){

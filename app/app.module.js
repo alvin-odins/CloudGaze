@@ -11,6 +11,7 @@ var platform_browser_1 = require("@angular/platform-browser");
 var http_1 = require("@angular/http");
 var app_component_1 = require("./app.component");
 var router_1 = require("@angular/router");
+var routerConfig_config_1 = require("./routerConfig.config");
 // services
 var blog_service_1 = require("./services/blogs/blog.service");
 var navbar_component_1 = require("./navbar/navbar.component");
@@ -23,33 +24,6 @@ var advertising_component_1 = require("./products/advertising/advertising.compon
 var consulting_component_1 = require("./products/consulting/consulting.component");
 var socialmedia_component_1 = require("./products/socialmedia/socialmedia.component");
 var webdevelopment_component_1 = require("./products/webdevelopment/webdevelopment.component");
-var appRoutes = [
-    { path: '', component: home_component_1.HomeComponent },
-    { path: 'about', component: about_component_1.AboutComponent },
-    { path: 'contact', component: contact_component_1.ContactComponent },
-    { path: 'blog', component: blog_component_1.BlogComponent },
-    { path: 'products/advertising', component: advertising_component_1.AdvertisingComponent },
-    { path: 'products/consulting', component: consulting_component_1.ConsultingComponent },
-    { path: 'products/socialmedia', component: socialmedia_component_1.SocialmediaComponent },
-    { path: 'products/webdevelopment', component: webdevelopment_component_1.WebdevelopmentComponent }
-    // {
-    //   path : 'services',
-    //   children: [
-    //     {
-    //       path: '/services/advertising', component: AdvertisingComponent
-    //     },
-    //     {
-    //       path: '/services/consulting', component: ConsultingComponent
-    //     },
-    //     {
-    //       path: '/services/socialmedia', component: SocialmediaComponent
-    //     },
-    //     {
-    //       path: '/services/webdevelopment', component: WebdevelopmentComponent
-    //     }
-    //   ]
-    // }
-];
 var AppModule = (function () {
     function AppModule() {
     }
@@ -58,7 +32,7 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule,
-            router_1.RouterModule.forRoot(appRoutes),
+            router_1.RouterModule.forRoot(routerConfig_config_1.routerConfig),
             http_1.HttpModule],
         providers: [blog_service_1.BlogService],
         declarations: [app_component_1.AppComponent,
